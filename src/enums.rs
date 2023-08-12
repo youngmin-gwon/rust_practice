@@ -8,7 +8,7 @@ enum Movement {
     Right,
 }
 
-fn move_avtar(m: Movement) {
+fn move_avatar(m: Movement) {
     // Perform action depending on info
     match m {
         Movement::Up => println!("Avatar moving up"),
@@ -24,8 +24,8 @@ pub fn run() {
     let avatar3 = Movement::Right;
     let avatar4 = Movement::Down;
 
-    move_avtar(avatar1);
-    move_avtar(avatar2);
-    move_avtar(avatar3);
-    move_avtar(avatar4);
+    move_avatar(avatar1);
+    move_avatar(avatar2);
+    move_avatar(avatar3);
+    move_avatar(avatar4);
 }
