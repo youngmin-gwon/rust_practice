@@ -13,15 +13,25 @@ pub fn run() {
 
     println!("I am {}", age);
 
+    // shadow
+    // * shadowing is different from marking a variable as mut because we'll get compile-time error
+    //   if we accidentally try to reassign to this variable without using the let keyword
+    {
+        let age = age * 2;
+        println!("I am {age}, age doubled");
+    }
+
+    println!("But back to original age: {age}");
+
     // but if changed
     // age = 38;
     // make it mutable => mut
-    let mut new_age = 10;
+    let mut new_age: i32 = 10;
     new_age = 110;
     println!("I am {}", new_age);
 
     // const keyword
-    // - doesn't use to much
+    // - isn't used too much
     const ID: i32 = 001; // upper case const
     println!("ID: {}", ID);
 
@@ -33,4 +43,3 @@ pub fn run() {
         age = my_age
     );
 }
-

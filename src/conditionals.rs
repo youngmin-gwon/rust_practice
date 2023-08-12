@@ -1,4 +1,4 @@
-// Conditinals - Used to check the condition of something
+// Conditionals - Used to check the condition of something
 //               and act on the result
 pub fn run() {
     let age: u8 = 18;
@@ -14,7 +14,7 @@ pub fn run() {
         println!("Bartender: I'll need to see your ID.");
     }
 
-    // Shorthand If (there is no tenary operation)
+    // Shorthand If (there is no ternary operation)
     let is_of_age = if age >= 21 { true } else { false };
     println!("Is of Age: {}", is_of_age);
 }

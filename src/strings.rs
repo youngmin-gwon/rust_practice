@@ -13,8 +13,7 @@ pub fn run() {
     // push: for char type
     hello_grow.push('W');
 
-    // push_str: for string
-    hello_grow.push_str("orl");
+    // push_str: for string    hello_grow.push_str("orl");
 
     // Capacity in bytes
     println!("Capacity: {}", hello_grow.capacity());

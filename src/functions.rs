@@ -1,4 +1,8 @@
 // Functions - Used to store blocks of code for re-use
+//
+// Statements and Expression
+// - `Statement` is instruction that performs some action and do not return a value
+// - `Expression` evaluates to a resultant value
 pub fn run() {
     greeting("Hello", "Jane");
 
