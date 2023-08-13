@@ -1,6 +1,46 @@
 // Loops - Used to iterate until a condition is met
+// * loop: infinite
+// * while: conditional
+// * for: iterate
 
 pub fn run() {
+    // return variable from loop
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+    println!("The result is {result}");
+
+    // loop labels to disambiguate between multiple loops
+    let mut count = 0;
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+
+            if remaining == 9 {
+                break;
+            }
+
+            if count == 2 {
+                break 'counting_up;
+            }
+
+            remaining -= 1;
+        }
+
+        count += 1;
+    }
+
+    println!("End count = {count}");
+
     let mut count = 0;
 
     // Infinite Loop
@@ -16,9 +56,9 @@ pub fn run() {
     count = 0;
 
     // While Loop (FizzBuzz)
-    while count <= 100 {
+    while count <= 20 {
         if count % 15 == 0 {
-            println!("fizzbuzz");
+            println!("fizz buzz");
         } else if count % 3 == 0 {
             println!("fizz");
         } else if count % 5 == 0 {

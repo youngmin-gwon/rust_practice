@@ -25,18 +25,48 @@ Arrays (fixed length) <-> Vector (growable length)
 // variable at compile time, the compiler can usually infer what type we want to use
 // based on the value and how we use it.
 pub fn run() {
+    // Integers
+
     // Default is "i32"
-    let x: i32 = 1;
+    let x: i32 = 1000;
+
+    println!("integer variable x: {x}");
+
+    let x: i32 = 1_000;
+
+    println!("and variable x(={x}) also can be expressed in 1_000");
+
+    let x: i32 = 0o77;
+
+    println!("octal format: {x}");
+
+    let x: i32 = 0xFF;
+
+    println!("hex format: {x}");
+
+    let x: i32 = 0b1111_0000;
+
+    println!("binary format: {x}");
+
+    let x: u8 = b'A';
+
+    println!("byte format(only u8): {x}");
 
     // Default is "f64"
-    let y: f64 = 2.5;
+    // let y: f64 = 2.5;
 
     // Add explicit type
-    let z: i64 = 454545454545;
+    // let z: i64 = 454_545_454_545;
 
     // Find max size
     println!("Max i32: {}", std::i32::MAX);
     println!("Max i64: {}", std::i64::MAX);
+
+    // numeric expression
+    // all same as other languages but look this example carefully
+    let truncated = -5 / 3;
+
+    println!("-5/3 in rust is: {truncated}");
 
     // Boolean
     let is_active: bool = true;
@@ -49,5 +79,5 @@ pub fn run() {
     // Even emoji
     let face: char = '\u{1F600}';
 
-    println!("{:?}", (x, y, z, is_active, is_greater, a1, face));
+    println!("{:?}", (is_active, is_greater, a1, face));
 }

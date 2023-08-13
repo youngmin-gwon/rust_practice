@@ -28,4 +28,57 @@ pub fn run() {
     move_avatar(avatar2);
     move_avatar(avatar3);
     move_avatar(avatar4);
+
+    let m = Message::Write(String::from(""));
+
+    // Option<T>
+    let some_number = Some(5);
+    let some_string = Some("a string");
+
+    // None should be explicitly declared
+    let absent_number: Option<i32> = None;
+}
+
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+
+// enum method
+impl Message {
+    fn call(&self) {}
+}
+
+// match example
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
+impl Coin {
+    fn in_cent_by_state(&self) -> u32 {
+        return match self {
+            Coin::Penny => {
+                println!("Lucky penny!");
+                return 1;
+            }
+            Coin::Nickel => 5,
+            other => 2,
+            // Coin::Dime => 10,
+            // Coin::Quarter(state) => {
+            //     println!("The state is: {:?}", state);
+            //     25
+            // }
+        };
+    }
+}
+
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
 }

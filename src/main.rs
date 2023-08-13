@@ -5,13 +5,15 @@
 // mod tuples;
 // mod arrays;
 // mod vectors;
-mod conditionals;
+// mod conditionals;
 // mod loops;
 // mod functions;
 // mod pointer_ref;
 // mod structs;
-// mod enums;
+mod enums;
 // mod cli;
+// mod ownership;
+
 fn main() {
     // print::run();
     // vars::run();
@@ -20,11 +22,12 @@ fn main() {
     // tuples::run();
     // arrays::run();
     // vectors::run();
-    conditionals::run();
+    // conditionals::run();
     // loops::run();
     // functions::run();
     // pointer_ref::run();
     // structs::run();
-    // enums::run();
+    enums::run();
     // cli::run();
+    // ownership::run();
 }

@@ -6,7 +6,7 @@ pub fn run() {
     let mut numbers: Vec<i32> = vec![1, 2, 3, 4];
 
     // Re-assign value
-    numbers[2] = 20;
+    numbers[1] = 20;
 
     // Add on to vector
     numbers.push(5);
@@ -23,7 +23,7 @@ pub fn run() {
 
     println!("Vector occupies {} bytes", mem::size_of_val(&numbers));
 
-    let slice: &[i32] = &numbers[1..3];
+    let slice: &[i32] = &numbers[1..(2 + 1)];
     println!("Slice: {:?}", slice);
 
     // Loop through vector value
