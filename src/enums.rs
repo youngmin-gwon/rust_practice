@@ -67,7 +67,7 @@ impl Coin {
                 return 1;
             }
             Coin::Nickel => 5,
-            other => 2,
+            _ => 2,
             // Coin::Dime => 10,
             // Coin::Quarter(state) => {
             //     println!("The state is: {:?}", state);
