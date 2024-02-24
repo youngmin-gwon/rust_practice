@@ -145,7 +145,7 @@ fn hashmap() {
 
     // 4. how to make word counter using hashmap
     // update hashmap based on old value
-    let text = "hello world woderful world";
+    let text = "hello world wonderful world";
 
     let mut map = HashMap::new();
 

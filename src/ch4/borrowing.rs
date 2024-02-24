@@ -10,7 +10,7 @@ pub fn run() {
     println!("The length of '{s1}' is {len}");
 
     // First, notice that all the tuple code
-    // in variables and the function return value in `owership.rs` is gone.
+    // in variables and the function return value in `ownership.rs` is gone.
     // Second, note that we pass &s1 into calculate_length and,
     // in its definition, we take &String rather than String.
     // These ampersands represent references,

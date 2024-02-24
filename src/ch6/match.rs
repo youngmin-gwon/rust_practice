@@ -26,7 +26,7 @@ fn value_in_cents(coin: Coin) -> u8 {
         Coin::Nickel => 5,
         Coin::Dime => 10,
         Coin::Quarter(state) => {
-            println!("You've got the quater from {:#?}", state);
+            println!("You've got the quarter from {:#?}", state);
             25
         }
     }
@@ -39,7 +39,7 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
     }
 }
 
-fn dice_roll(x:u8) {
+fn dice_roll(x: u8) {
     match x {
         3 => println!("do something for 3"),
         7 => println!("do something for 7"),

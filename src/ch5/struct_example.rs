@@ -19,7 +19,7 @@ pub fn run() {
     //     area(rect)
     // );
 
-    // Originally throws an error saying `Rectangle` doesn;t implement
+    // Originally throws an error saying `Rectangle` doesn't implement
     // `std:fmt:display`
     println!("rect is {:#?}", rect);
 
@@ -60,8 +60,7 @@ pub fn run() {
     // - we can define associated functions that don't need an instance of
     // the type to work with
     let square = Rectangle::square(3);
-    println!("{:#?}",square);
-    
+    println!("{:#?}", square);
 }
 
 // Original

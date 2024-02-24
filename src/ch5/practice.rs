@@ -19,8 +19,8 @@ pub fn run() {
 }
 
 struct Rectangle {
-    width: u32,
-    height: u32,
+    width: f64,
+    height: f64,
 }
 
 impl Rectangle {

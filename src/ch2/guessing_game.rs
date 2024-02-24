@@ -21,7 +21,7 @@ pub fn run() {
             .read_line(&mut guess) // read_line append input, not overrides
             .expect("Failed to read line");
         // & indicates a reference
-        // expecet() handles potential failure with result
+        // expect() handles potential failure with result
         // red_line() returns a Result
         // Result is an enumeration, which is a type
         // that can be in one of multiple possible states

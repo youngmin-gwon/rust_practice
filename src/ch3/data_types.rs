@@ -9,7 +9,7 @@ pub fn run() {
     //       indexing some sort of collection.
     //   - number literals example:
     //   `57u8`,
-    //   `1_000`(decimal, visual seperator for 1000),
+    //   `1_000`(decimal, visual separator for 1000),
     //   `0xff`(hex),
     //   `0o77`(octal),
     //   `0b1111_0000`(binary),

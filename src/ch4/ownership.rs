@@ -23,7 +23,7 @@ pub fn run() {
     let (s2, len) = calculate_length(s1);
     println!("The length of '{s2}' is {len}");
 } // Here, x goes out of scope, then s. But because s's value was moved,
-  // nothig special happens.
+  // nothing special happens.
 
 // this only works for data type whose size is not set in compile-time.
 fn explain_memory_alloc() {
