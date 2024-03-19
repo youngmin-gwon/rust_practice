@@ -20,8 +20,10 @@
 // mod collections;
 // #[path = "ch9/error_handling.rs"]
 // mod error_handling;
-#[path = "ch10/generics.rs"]
-mod generics;
+// #[path = "ch10/generics.rs"]
+// mod generics;
+#[path = "ch10/traits.rs"]
+mod traits;
 
 fn main() {
     // guessing_game::run();
@@ -41,5 +43,6 @@ fn main() {
     // restaurant::back_of_house::fix_incorrect_order();
     // collections::run();
     // error_handling::run();
-    generics::run();
+    // generics::run();
+    traits::run();
 }
