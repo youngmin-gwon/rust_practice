@@ -1,3 +1,6 @@
+use core::fmt::Display;
+use std::fmt::Debug;
+
 // similar to a feature called interfaces in other languages
 pub fn run() {
     let tweet = Tweet {
@@ -124,3 +127,13 @@ pub trait TextToSpeech {}
 pub fn notify5(item: &(impl Summary + TextToSpeech)) {}
 
 pub fn notify6<T: Summary + TextToSpeech>(item: &T) {}
+
+// 5) clearer trait bounds with where clauses
+fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) {}
+
+fn some_function2<T, U>(t: &T, u: &U)
+where
+    T: Display + Clone,
+    U: Clone + Debug,
+{
+}
