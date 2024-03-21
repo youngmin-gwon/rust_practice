@@ -137,3 +137,13 @@ where
     U: Clone + Debug,
 {
 }
+
+// 5. Returning types that implement traits
+fn returns_summarizable() -> impl Summary {
+    Tweet {
+        username: String::from("horse_ebooks"),
+        content: String::from("of course, as you probably already know, people"),
+        reply: false,
+        retweet: false,
+    }
+}
