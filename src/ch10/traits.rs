@@ -139,6 +139,9 @@ where
 }
 
 // 5. Returning types that implement traits
+// - returning only one type is allowed due to restrictions
+//   around how the `impl Trait` syntax is implemented in the compiler.
+//   "Using trait objects that allow for values of different types" will be covered in Ch.17.
 fn returns_summarizable() -> impl Summary {
     Tweet {
         username: String::from("horse_ebooks"),
@@ -147,3 +150,34 @@ fn returns_summarizable() -> impl Summary {
         retweet: false,
     }
 }
+
+// 6. Using trait bounds to conditionally implement methods
+// - trait and trait bounds let us write code that uses generic type parameters to reduce duplication
+//   but also specify to the compiler that we want the generic type to have particular behavior.
+// - it is called `blanket implementations` and is extensively used
+//    in the Rust Standard library.
+// - if you want a reference on blanket implementations, look into "Implementors" section.
+struct Pair<T> {
+    x: T,
+    y: T,
+}
+
+impl<T> Pair<T> {
+    fn new(x: T, y: T) -> Self {
+        Self { x, y }
+    }
+}
+
+impl<T: Display + PartialOrd> Pair<T> {
+    fn cmp_display(&self) {
+        if self.x >= self.y {
+            println!("The largest member is x = {}", self.x)
+        } else {
+            println!("The largest member is y = {}", self.y)
+        }
+    }
+}
+// Rust moves these errors to compile time so we’re forced to fix the problems before
+// our code is even able to run. Additionally, we don’t have to write code that checks
+// for behavior at runtime because we’ve already checked at compile time.
+// Doing so improves performance without having to give up the flexibility of generics.
