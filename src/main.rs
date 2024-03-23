@@ -22,8 +22,10 @@
 // mod error_handling;
 // #[path = "ch10/generics.rs"]
 // mod generics;
-#[path = "ch10/traits.rs"]
-mod traits;
+// #[path = "ch10/traits.rs"]
+// mod traits;
+#[path = "ch10/validating_references_with_lifetimes.rs"]
+mod validating_references_with_lifetimes;
 
 fn main() {
     // guessing_game::run();
@@ -44,5 +46,6 @@ fn main() {
     // collections::run();
     // error_handling::run();
     // generics::run();
-    traits::run();
+    // traits::run();
+    validating_references_with_lifetimes::run();
 }
